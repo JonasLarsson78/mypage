@@ -1,4 +1,4 @@
-# my-page
+# mypage
 
 ## Project setup
 ```

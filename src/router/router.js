@@ -7,6 +7,10 @@ import Portfolio from '../pages/Portfolio'
 
 const routes = [
   {
+    path: '/mypage',
+    redirect: '/',
+  },
+  {
     path: '/',
     Name: 'Home',
     component: Home
@@ -34,6 +38,6 @@ const routes = [
 ]
 
 export default createRouter({
-  history: createWebHistory('mypage'),
+  history: createWebHistory(),
   routes
 })

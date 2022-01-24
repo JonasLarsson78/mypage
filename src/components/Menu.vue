@@ -39,7 +39,7 @@ export default {
   name: 'Menu',
   data() {
     return {
-      show: false
+      show: false,
     }
   },
   mounted() {
@@ -52,7 +52,7 @@ export default {
         this.setRouteTitle('Cv')
         break
       case '/aboute':
-        this.setRouteTitle('Om Oss')
+        this.setRouteTitle('Om Mig')
         break
       case '/contact':
         this.setRouteTitle('Kontakt')
@@ -63,7 +63,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['getRouteTitle'])
+    ...mapGetters(['getRouteTitle']),
   },
   methods: {
     ...mapActions(['setRouteTitle']),
@@ -79,8 +79,8 @@ export default {
       this.toggleMenu()
       this.setRouteTitle(name)
       this.$router.push({ path: route })
-    }
-  }
+    },
+  },
 }
 </script>
 

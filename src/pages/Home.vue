@@ -14,17 +14,20 @@
         </div>
       </div>
     </div>
-    <img class="home-img" src="../assets/code.jpeg" />
+    <BackImg />
   </div>
 </template>
 
 <script>
+import BackImg from '../components/BackImg'
 export default {
   name: 'Home',
-  components: {},
+  components: {
+    BackImg,
+  },
   mounted() {
     document.title = 'MyPage - Hem'
-  }
+  },
 }
 </script>
 
@@ -32,20 +35,7 @@ export default {
 .home {
   width: 100%;
   height: calc(100vh - 40px);
-  /*   background-image: url('../assets/code.jpeg');
-  background-size: 100%;
-  background-repeat: no-repeat; */
   text-align: center;
-
-  &-img {
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 100%;
-    height: calc(100% - 40px);
-    z-index: 0;
-    opacity: 0.5;
-  }
 
   &-question {
     position: relative;

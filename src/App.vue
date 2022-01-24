@@ -15,7 +15,7 @@ export default {
     Footer
   },
   mounted() {
-    document.title = 'MyPage'
+    document.title = process.env.NODE_ENV === 'production' ? 'MyPage' : 'MyPage - DEV'
   }
 }
 </script>

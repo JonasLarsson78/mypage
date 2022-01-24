@@ -4,17 +4,20 @@
       <img class="cv-tab1__img" src="../assets/me_commputer.png" />
       <div>Jonas Larsson</div>
     </div>
-    <img class="cv-img" src="../assets/code.jpeg" />
+    <BackImg />
   </div>
 </template>
 
 <script>
+import BackImg from '../components/BackImg'
 export default {
   name: 'Cv',
-  components: {},
+  components: {
+    BackImg,
+  },
   mounted() {
     document.title = 'MyPage - Cv'
-  }
+  },
 }
 </script>
 
@@ -42,15 +45,6 @@ export default {
       margin-top: 10px;
       background-color: #00000010;
     }
-  }
-
-  &-img {
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 100%;
-    height: calc(100% - 40px);
-    opacity: 0.5;
   }
 }
 </style>

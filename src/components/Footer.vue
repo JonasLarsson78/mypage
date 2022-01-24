@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'Footer'
+  name: 'Footer',
 }
 </script>
 
@@ -21,5 +21,6 @@ export default {
   justify-content: center;
   align-items: center;
   color: $meny-color-secondary;
+  z-index: 100;
 }
 </style>

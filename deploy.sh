@@ -2,7 +2,7 @@
 
 #Git Deploy
 git add .
-git commit -m "$m"
+git commit -m "deploy"
 git push -u origin main
 
 #Build App

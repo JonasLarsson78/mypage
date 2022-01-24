@@ -27,11 +27,27 @@
       <div class="flex-column">
         <span class="flex">
           <img class="svg" src="../assets/mail.svg" />
-          <span><a href="mailto:jl.7804@gmail.com">jl.7804@gmail.com</a></span>
+          <span
+            ><a href="mailto:jl.7804@gmail.com" target="_blank"
+              >jl.7804@gmail.com</a
+            ></span
+          >
+          <img class="svg" src="../assets/phone.svg" />
+          <span><a href="tel:0706444922" target="_blank">0706444922</a></span>
         </span>
         <span class="flex">
-          <img class="svg" src="../assets/phone.svg" />
-          <span><a href="tel:0706444922">0706444922</a></span>
+          <img class="svg" src="../assets/linkedin.svg" />
+          <span
+            ><a href="https://www.linkedin.com/in/jonlarsson/" target="_blank"
+              >jonlarsson</a
+            ></span
+          >
+          <img class="svg" src="../assets/github.svg" />
+          <span
+            ><a href="https://github.com/JonasLarsson78" target="_blank"
+              >JonasLarsson78</a
+            ></span
+          >
         </span>
       </div>
       <div>{{ message }}</div>
@@ -176,5 +192,6 @@ export default {
 .svg {
   width: 30px;
   margin-right: 10px;
+  margin-left: 10px;
 }
 </style>

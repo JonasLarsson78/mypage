@@ -2,12 +2,12 @@
   <div class="contact">
     <div class="contact-form">
       <div class="flex-column">
-        <h2>Kontakta</h2>
+        <h2>Kontakt</h2>
         <input
-          v-model="formValues.mail"
+          v-model="formValues.name"
           type="email"
-          class="contact-form__mail"
-          placeholder="Mail"
+          class="contact-form__name"
+          placeholder="Namn"
         />
         <input
           v-model="formValues.subject"
@@ -27,30 +27,32 @@
       <div class="flex-column">
         <span class="flex">
           <img class="svg" src="../assets/mail.svg" />
-          <span
-            ><a href="mailto:jl.7804@gmail.com" target="_blank"
-              >jl.7804@gmail.com</a
-            ></span
-          >
+          <span>
+            <a href="mailto:jl.7804@gmail.com" target="_blank">
+              jl.7804@gmail.com
+            </a>
+          </span>
           <img class="svg" src="../assets/phone.svg" />
-          <span><a href="tel:0706444922" target="_blank">0706444922</a></span>
+          <span>
+            <a href="tel:0706444922" target="_blank">0706444922</a>
+          </span>
         </span>
         <span class="flex">
           <img class="svg" src="../assets/linkedin.svg" />
-          <span
-            ><a href="https://www.linkedin.com/in/jonlarsson/" target="_blank"
-              >jonlarsson</a
-            ></span
-          >
+          <span>
+            <a href="https://www.linkedin.com/in/jonlarsson/" target="_blank">
+              jonlarsson
+            </a>
+          </span>
           <img class="svg" src="../assets/github.svg" />
-          <span
-            ><a href="https://github.com/JonasLarsson78" target="_blank"
-              >JonasLarsson78</a
-            ></span
-          >
+          <span>
+            <a href="https://github.com/JonasLarsson78" target="_blank"
+              >JonasLarsson78
+            </a>
+          </span>
         </span>
       </div>
-      <div>{{ message }}</div>
+      <div class="contact-form__message">{{ message }}</div>
     </div>
     <BackImg />
   </div>
@@ -66,7 +68,7 @@ export default {
   data() {
     return {
       formValues: {
-        mail: null,
+        name: null,
         subject: null,
         body: null,
       },
@@ -78,14 +80,18 @@ export default {
   },
   methods: {
     sendMail() {
-      const { mail, subject, body } = this.formValues
-      if (!mail || !subject || !body) {
+      const { name, subject, body } = this.formValues
+      if (!name || !subject || !body) {
         this.message = 'Måste fylla i alla fält'
         return
       }
-      console.log(this.formValues)
-      window.open(`mailto:${mail}?subject=${subject}&body=${body}`)
+      window.open(`mailto:jl.7804@gmail.com?subject=${subject}&body=${body}`)
       this.message = ''
+      this.formValues = {
+        name: null,
+        subject: null,
+        body: null,
+      }
     },
   },
 }
@@ -110,8 +116,8 @@ export default {
     left: 50%;
     transform: translate(-50%, 0);
     top: 100px;
-    width: 600px;
-    height: 600px;
+    width: 650px;
+    height: 650px;
     background-color: white;
     border-radius: 10px;
     border: 3px solid $meny-color-primary;
@@ -123,7 +129,7 @@ export default {
       color: $meny-color-primary;
     }
 
-    &__mail {
+    &__name {
       width: 400px;
       height: 30px;
       border: 3px solid $meny-color-primary;
@@ -169,6 +175,11 @@ export default {
       &:hover {
         opacity: 0.7;
       }
+    }
+
+    &__message {
+      color: $meny-color-primary;
+      font-weight: 600;
     }
   }
 }

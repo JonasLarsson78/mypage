@@ -23,7 +23,7 @@
       <div class="menu-list__text" @click="clickMenu('portfolio', 'Portfolio')">
         Portfolio
       </div>
-      <div class="menu-list__text" @click="clickMenu('aboute', 'Om Oss')">
+      <div class="menu-list__text" @click="clickMenu('aboute', 'Om Mig')">
         Om Mig
       </div>
       <div class="menu-list__text" @click="clickMenu('contact', 'Kontakt')">

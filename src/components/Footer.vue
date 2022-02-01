@@ -1,6 +1,14 @@
 <template>
   <div class="footer">
-    <div>Copyright © Jonas Larsson</div>
+    <div>
+      {{ 'Copyright © Jonas Larsson - '
+      }}<a
+        class="footer-github"
+        href="https://github.com/JonasLarsson78/mypage"
+        target="_blank"
+        >Github</a
+      >
+    </div>
   </div>
 </template>
 
@@ -22,5 +30,11 @@ export default {
   align-items: center;
   color: $meny-color-secondary;
   z-index: 100;
+
+  &-github {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
 }
 </style>
